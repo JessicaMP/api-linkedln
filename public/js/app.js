@@ -13,18 +13,18 @@ function onSuccess(data) {
     localStorage.setItem(`url`, url);
 }
 
-function otherDates(data) { // estos datos no estan en basic profile
-    localStorage.pictureUrl = data.pictureUrl;
+function moreInfo(data) { // estos datos no estan en basic profile
+    localStorage.picture = data.pictureUrl;
     window.location.href = 'views/home.html';
 }
 
 // Handle an error response from the API call
-function onError(error) {
+function onError (error) {
     console.log(error);
 }
 
 // Use the API call wrapper to request the member's basic profile data
 function getProfileData() {
     IN.API.Raw("/people/~").result(onSuccess).error(onError);
-    IN.API.Raw('people/~:(id,num-connections,picture-url)').result(otherDates).error(onError);
+    IN.API.Raw('people/~:(id,num-connections,pictureUrl)').result(moreInfo).error(onError);
 }

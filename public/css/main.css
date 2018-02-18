@@ -3,30 +3,21 @@
 body {
     font-family: 'Marvel', sans-serif;
 }
+
 .background {
     background-image: url('../assets/images/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
- }
+}
 
 .title {
- font-size: 9em;
+ font-size: 7em;
  font-weight: bold;
  padding: 2rem;
 }
 
-.flex {
-    background: transparent;
-    height: 123em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.center-position {
+    transform: translateY(300%);
 }
 
-.flex-box {
-    background: transparent;
-    width: 100%;
-}
 /*Home*/
 .welcome {
     color: #FF8605;
@@ -73,7 +64,7 @@ body {
     right: 0;
 }
 
-@media(min-width: 450px) {
+@media(min-width: 992px) {
     .logo {
         margin-top: 1rem;
         width: 10%;
@@ -84,11 +75,12 @@ body {
         position: relative;
     }
 
-    .flex {
-        height: 30em;
-    }
-
+    
     .title {
         font-size: 4.5em;
+    }
+
+    .center-position {
+        transform: translateY(0%);
     }
 }
