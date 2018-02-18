@@ -83,4 +83,12 @@ body {
         min-height: 100%;
         position: relative;
     }
+
+    .flex {
+        height: 30em;
+    }
+
+    .title {
+        font-size: 4.5em;
+    }
 }
